@@ -9,6 +9,7 @@ import { useState } from "react"
 import EmojiPicker from "@/components/EmojiPicker"
 import EmojiList from "@/components/EmojiList"
 import EmojiSticker from "@/components/EmojiSticker"
+import { GestureHandlerRootView } from "react-native-gesture-handler"
 
 const PlaceHolder = require("../assets/images/background-image.png")
 export default function App() {
@@ -42,7 +43,7 @@ export default function App() {
   const onSaveImageAsync = async () => {}
 
   return (
-    <View style={styles.container}>
+    <GestureHandlerRootView style={styles.container}>
       <View style={styles.imageContainer}>
         <ImageViewer
           PlaceHolderSource={PlaceHolder}
@@ -84,7 +85,7 @@ export default function App() {
         <EmojiSticker stickerSource={pickedEmoji} imageSize={50}></EmojiSticker>
       )}
       <StatusBar style="auto" />
-    </View>
+    </GestureHandlerRootView>
   )
 }
 
